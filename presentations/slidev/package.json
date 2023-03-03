@@ -10,6 +10,7 @@
   "dependencies": {
     "@slidev/cli": "^0.40.3",
     "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
+    "@slidev/theme-seriph": "*",
+    "vue": "^3.2.47"
   }
 }
