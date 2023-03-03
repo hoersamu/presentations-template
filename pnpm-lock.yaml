@@ -22,10 +22,12 @@ importers:
       '@slidev/cli': ^0.40.3
       '@slidev/theme-default': '*'
       '@slidev/theme-seriph': '*'
+      vue: ^3.2.47
     dependencies:
       '@slidev/cli': 0.40.3_@types+node@18.14.5
       '@slidev/theme-default': 0.21.2
       '@slidev/theme-seriph': 0.21.3
+      vue: 3.2.47
 
   presentations/zero-trust:
     specifiers:
