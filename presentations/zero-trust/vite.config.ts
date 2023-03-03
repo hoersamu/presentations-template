@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  base: `/presentations/${JSON.stringify(require('./package.json').name).slice(1, -1)}/`,
+  base: `/${process.env.REPO_PREFIX}/${import.meta.url.split('/').at(-2)}/`,
 })
