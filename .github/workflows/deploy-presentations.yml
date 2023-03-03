@@ -35,9 +35,6 @@ jobs:
           touch .env
           echo REPO_PREFIX=${{ github.event.repository.name }} >> .env
 
-      - name: Spread env
-        run: for d in presentations/*/; do cp .env "$d"; done
-
       - name: Build
         run: pnpm run deploy
 

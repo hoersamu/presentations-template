@@ -1,13 +1,10 @@
 {
-  "name": "zero-trust",
+  "name": "slidev",
   "private": true,
   "scripts": {
     "build": "slidev build",
-    "dev": "slidev --open",
-    "export": "slidev export",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "deploy": "cp -r dist ../../dist/zero-trust"
+    "dev": "slidev --open -p 3000",
+    "export": "slidev export"
   },
   "dependencies": {
     "@slidev/cli": "^0.40.3",

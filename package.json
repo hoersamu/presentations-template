@@ -1,10 +1,30 @@
 {
-  "name": "presentations",
+  "name": "presentation-template",
   "version": "0.0.0",
+  "description": "A template for creating presentations with Turbo and GitHub Pages",
+  "author": "hoersamu (Samuel Höra)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoersamu/presentations-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hoersamu/presentations-template/issues"
+  },
+  "keywords": [
+    "Turbo",
+    "Presentation",
+    "GitHub Pages",
+    "Monorepo",
+    "Slidev",
+    "VitePress",
+    "Vue",
+    "Vite"
+  ],
   "private": true,
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "packages/*",
+    "projects/*"
   ],
   "scripts": {
     "build": "turbo run build",
@@ -12,19 +32,18 @@
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "clean": "rm -rf dist && mkdir dist",
-    "deploy": "turbo deploy"
+    "deploy": "turbo deploy && npm run deploy:move-dist",
+    "deploy:move-dist":"for d in projects/*/; do cp -r \"$d\"dist dist/$(basename $d); done && [ -d dist/index ] && mv dist/index/* dist && rm -rf dist/index"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.3",
     "@types/node": "^18.14.5",
     "eslint": "^8.35.0",
-    "turbo": "latest"
+    "turbo": "latest",
+    "typescript": "^4.9.5"
   },
   "engines": {
     "node": ">=16.0.0"
   },
-  "packageManager": "pnpm@6.11.0",
-  "dependencies": {
-    "typescript": "^4.9.5"
-  }
+  "packageManager": "pnpm@6.11.0"
 }
