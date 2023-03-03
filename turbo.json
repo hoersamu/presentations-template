@@ -8,8 +8,12 @@
     },
     "lint": {},
     "lint:fix":{},
+    "deploy":{
+      "dependsOn": ["build","//#clean"]
+    },
     "dev": {
       "cache": false
-    }
+    },
+    "//#clean": {}
   }
 }

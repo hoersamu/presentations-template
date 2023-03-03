@@ -6,7 +6,8 @@
     "dev": "slidev --open",
     "export": "slidev export",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "deploy": "cp -r dist ../../dist/zero-trust"
   },
   "dependencies": {
     "@slidev/cli": "^0.40.3",

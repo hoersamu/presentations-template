@@ -4,7 +4,8 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open -p 3001",
-    "export": "slidev export"
+    "export": "slidev export",
+    "deploy": "cp -r dist ../../dist/slidev"
   },
   "dependencies": {
     "@slidev/cli": "^0.40.3",
