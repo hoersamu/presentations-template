@@ -22,10 +22,6 @@
     "Vite"
   ],
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "projects/*"
-  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
